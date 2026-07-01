@@ -64,7 +64,7 @@ Portfolio/
 AI & ML Engineer • Software Engineer • SAP Developer
 
 - GitHub: https://github.com/tanmayyenpure
-- LinkedIn: https://linkedin.com/in/your-profile
+- LinkedIn: https://www.linkedin.com/in/tanmay-yenpure-779a81333
 
 ---
 
