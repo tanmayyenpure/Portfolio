@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanmay Yenpure | AI Engineer & Full-Stack Developer</title>
+    <meta name="description"
+        content="Portfolio of Tanmay Yenpure, an AI Engineer, Full-Stack Developer, Founder, and Product Builder. Exploring AI integrations, SaaS development, and professional consulting.">
+    <meta name="keywords"
+        content="Tanmay Yenpure, AI Engineer, Full-Stack Developer, Founder, Product Builder, Next.js, React, Tailwind CSS, Portfolio">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tanmay Yenpure | AI Engineer & Full-Stack Developer">
+    <meta property="og:description"
+        content="Portfolio of Tanmay Yenpure, an AI Engineer, Full-Stack Developer, Founder, and Product Builder.">
+    <meta property="og:image" content="avatar.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Tanmay Yenpure | AI Engineer & Full-Stack Developer">
+    <meta property="twitter:description"
+        content="Portfolio of Tanmay Yenpure, an AI Engineer, Full-Stack Developer, Founder, and Product Builder.">
+    <meta property="twitter:image" content="avatar.png">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css?v=20260701-1315">
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <!-- PRE-LOADER -->
+    <div id="preloader">
+        <div class="loader-logo">
+            <span class="gradient-text">TY.PORTFOLIO</span>
+            <div class="loader-dots">
+                <span class="loader-dot"></span>
+                <span class="loader-dot"></span>
+                <span class="loader-dot"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER / NAVIGATION -->
+    <header>
+        <div class="container navbar">
+            <a href="#hero" class="nav-brand">My Portfolio</a>
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#about" class="active">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#certifications">Reference</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <button class="kbd-palette-btn" id="kbd-palette-btn" title="Open Command Palette (Ctrl+K)">
+                    <i data-lucide="terminal"></i>
+                </button>
+                <button class="theme-toggle-btn" id="theme-toggle-btn" title="Toggle Theme">
+                    <i data-lucide="sun" id="theme-icon-sun" style="display: none;"></i>
+                    <i data-lucide="moon" id="theme-icon-moon"></i>
+                </button>
+                <span class="kbd-shortcut-hint">Ctrl K</span>
+                <button class="menu-toggle" id="menu-toggle">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <p class="hero-kicker">AI/ML &nbsp;·&nbsp; Full-Stack Development &nbsp;·&nbsp; SAP Technologies</p>
+                <h1 class="hero-greeting">Hi, I'm <span class="gradient-text">Tanmay Yenpure</span></h1>
+                <p class="hero-subtitle">I specialize in Artificial
+                    Intelligence, Machine Learning, Software Engineering, Full-Stack Development, and SAP
+                    technologies. I'm passionate about building AI-powered applications, scalable software systems,
+                    cloud-based solutions, and innovative products that create real-world impact.</p>
+                <div class="hero-ctas">
+                    <div class="hero-socials">
+                        <a href="https://www.linkedin.com/in/tanmay-yenpure-779a81333" target="_blank"
+                            rel="noopener noreferrer" class="hero-social-icon" title="LinkedIn">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M6.94 8.78H3.92v10.1h3.02V8.78ZM5.43 7.4c.97 0 1.75-.79 1.75-1.76 0-.96-.78-1.74-1.75-1.74s-1.75.78-1.75 1.74c0 .97.78 1.76 1.75 1.76Zm13.97 11.48v-5.52c0-2.96-1.58-4.34-3.69-4.34-1.7 0-2.46.94-2.88 1.6V8.78H9.93v10.1h3.02v-5c0-1.32.25-2.6 1.89-2.6 1.61 0 1.63 1.51 1.63 2.68v4.92h2.93Z" />
+                            </svg>
+                        </a>
+                        <a href="https://github.com/tanmayyenpure" target="_blank" rel="noopener noreferrer"
+                            class="hero-social-icon" title="GitHub">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M12 .5C5.73.5.75 5.48.75 11.75c0 4.96 3.2 9.18 7.64 10.68.56.1.76-.24.76-.54v-2.1c-3.11.68-3.76-1.32-3.76-1.32-.51-1.29-1.24-1.63-1.24-1.63-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15.99 1.7 2.61 1.21 3.24.92.1-.72.39-1.21.71-1.49-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.44-2.22 1.15-3-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.09 1.15.9-.25 1.86-.38 2.82-.38.96 0 1.92.13 2.82.38 2.15-1.45 3.09-1.15 3.09-1.15.61 1.54.23 2.68.11 2.96.72.78 1.15 1.78 1.15 3 0 4.29-2.61 5.24-5.1 5.52.4.35.76 1.03.76 2.08v3.08c0 .3.2.65.77.54 4.43-1.5 7.63-5.72 7.63-10.68C23.25 5.48 18.27.5 12 .5z" />
+                            </svg>
+                        </a>
+                        <a href="https://leetcode.com/u/tanmayyenpure/" target="_blank" rel="noopener noreferrer"
+                            class="hero-social-icon" title="LeetCode">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M13.48 2.16 6.7 9.02c-.6.6-.94 1.42-.94 2.27 0 .85.34 1.66.94 2.27l4.62 4.68c.62.63 1.63.63 2.25 0 .62-.63.62-1.65 0-2.28l-3.5-3.55a1.03 1.03 0 0 1 0-1.44l5.02-5.09a1.6 1.6 0 0 0 0-2.24 1.55 1.55 0 0 0-2.24-.02z" />
+                                <path
+                                    d="M9.6 15.4l1.63 1.65c1.7 1.72 4.45 1.72 6.14 0a1.6 1.6 0 0 0 0-2.25 1.55 1.55 0 0 0-2.22 0 1.83 1.83 0 0 1-2.58 0l-1.63-1.65a1.6 1.6 0 0 0-2.25 0c-.6.63-.6 1.63-.01 2.25z" />
+                                <rect x="12.5" y="10.2" width="8.5" height="2.4" rx="1.2" />
+                            </svg>
+                        </a>
+                    </div>
+                    <a href="Tanmay_Ankush_Yenpure_Resume.pdf" download class="btn btn-primary hero-resume-btn">
+                        Download Resume <i data-lucide="download"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="avatar-wrapper">
+                    <img src="profile-avatar.jpg" alt="Tanmay Yenpure" class="avatar-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">A brief overview of my professional focus, technical passions, and key
+                highlights.</p>
+
+            <div class="about-grid">
+                <div class="about-details">
+                    <p>I build at the intersection of AI, software engineering, and real-world problem solving. My focus
+                        is turning ideas into reliable products that are intelligent, scalable, and useful in practical
+                        environments.</p>
+                    <p>From AI-powered platforms and full-stack applications to SAP backend development and cloud-ready
+                        systems, I care about clean architecture, strong execution, and technology that creates measurable
+                        impact.</p>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-num">20+</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-num">3+</div>
+                        <div class="stat-label">Years of Learning</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-num">100%</div>
+                        <div class="stat-label">Dedication</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-num">Open</div>
+                        <div class="stat-label">For Opportunities</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="section" id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <p class="section-subtitle">Categorized stack of technologies I utilize to bring concepts to production.</p>
+
+            <div class="skills-container">
+                <div class="skills-filter" id="skills-filter">
+                    <button class="filter-chip active" data-category="all">All Skills</button>
+                    <button class="filter-chip" data-category="ai">AI / ML</button>
+                    <button class="filter-chip" data-category="frontend">Frontend</button>
+                    <button class="filter-chip" data-category="backend">Backend</button>
+                    <button class="filter-chip" data-category="devops">DevOps & Cloud</button>
+                </div>
+
+                <div class="skills-grid" id="skills-grid">
+                    <!-- AI Skills -->
+                    <div class="skill-card" data-category="ai">
+                        <i data-lucide="brain-circuit"></i>
+                        <div class="skill-info">
+                            <h3>LLM Integration</h3>
+                            <p>OpenAI, Anthropic, LangChain</p>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-category="ai">
+                        <i data-lucide="cpu"></i>
+                        <div class="skill-info">
+                            <h3>Machine Learning</h3>
+                            <p>PyTorch, TensorFlow, Scikit-Learn</p>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-category="ai">
+                        <i data-lucide="database"></i>
+                        <div class="skill-info">
+                            <h3>Vector Databases</h3>
+                            <p>Pinecone, ChromaDB, PGVector</p>
+                        </div>
+                    </div>
+
+                    <!-- Frontend Skills -->
+                    <div class="skill-card" data-category="frontend">
+                        <i data-lucide="layers"></i>
+                        <div class="skill-info">
+                            <h3>React & Next.js</h3>
+                            <p>TypeScript, App Router, SSR</p>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-category="frontend">
+                        <i data-lucide="palette"></i>
+                        <div class="skill-info">
+                            <h3>Tailwind CSS</h3>
+                            <p>Responsive CSS, Design Systems</p>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-category="frontend">
+                        <i data-lucide="smartphone"></i>
+                        <div class="skill-info">
+                            <h3>Mobile Web</h3>
+                            <p>PWA, Adaptive layouts</p>
+                        </div>
+                    </div>
+
+                    <!-- Backend Skills -->
+                    <div class="skill-card" data-category="backend">
+                        <i data-lucide="server"></i>
+                        <div class="skill-info">
+                            <h3>Node.js & Go</h3>
+                            <p>Express, REST APIs, WebSockets</p>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-category="backend">
+                        <i data-lucide="database"></i>
+                        <div class="skill-info">
+                            <h3>Databases</h3>
+                            <p>PostgreSQL, MongoDB, Redis</p>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-category="backend">
+                        <i data-lucide="key-round"></i>
+                        <div class="skill-info">
+                            <h3>Security & Auth</h3>
+                            <p>JWT, OAuth, Secure headers</p>
+                        </div>
+                    </div>
+
+                    <!-- DevOps & Cloud Skills -->
+                    <div class="skill-card" data-category="devops">
+                        <i data-lucide="cloud"></i>
+                        <div class="skill-info">
+                            <h3>AWS & Vercel</h3>
+                            <p>S3, EC2, Serverless, Deployments</p>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-category="devops">
+                        <i data-lucide="container"></i>
+                        <div class="skill-info">
+                            <h3>Docker</h3>
+                            <p>Containerization, Dev environments</p>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-category="devops">
+                        <i data-lucide="git-branch"></i>
+                        <div class="skill-info">
+                            <h3>CI / CD</h3>
+                            <p>GitHub Actions, Automated pipelines</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="projects-header">
+                <div class="section-info">
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-subtitle" style="margin-bottom: 0;">Explore production-ready applications, AI
+                        integrations, and open-source packages.</p>
+                </div>
+                <div class="projects-search-bar">
+                    <i data-lucide="search"></i>
+                    <input type="text" id="projects-search-input" placeholder="Search projects by stack or name...">
+                </div>
+            </div>
+
+            <div class="projects-grid" id="projects-grid">
+                <!-- Project 1: MandirGo -->
+                <div class="project-card" data-tags="nextjs,postgres,maps,node" data-id="mandirgo">
+                    <div class="project-img-wrapper">
+                        <img src="mandirgo-cover.svg" alt="MandirGo temple project preview" class="project-img">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">Next.js</span>
+                            <span class="project-tag">PostgreSQL</span>
+                            <span class="project-tag">Maps API</span>
+                        </div>
+                        <h3>MandirGo</h3>
+                        <p>A devotional tourism platform presented at Shrimant Dagdusheth Halwai Ganpati Temple, Pune,
+                            focused on queue insights, puja booking, and live crowd visibility.</p>
+                        <div class="project-footer">
+                            <span class="case-study-badge">Read Case Study</span>
+                            <div class="project-links">
+                                <a href="#" class="project-link-btn" onclick="event.stopPropagation();"><i
+                                        data-lucide="github"></i></a>
+                                <a href="#" class="project-link-btn" onclick="event.stopPropagation();"><i
+                                        data-lucide="external-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: BloodSync -->
+                <div class="project-card" data-tags="reactnative,node,mongodb,websockets" data-id="bloodsync">
+                    <div class="project-img-wrapper">
+                        <img src="bloodsync-cover.svg" alt="BloodSync project preview" class="project-img">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">React Native</span>
+                            <span class="project-tag">WebSockets</span>
+                            <span class="project-tag">MongoDB</span>
+                        </div>
+                        <h3>BloodSync</h3>
+                        <p>A real-time blood donation matchmaking and supply tracking project built in collaboration
+                            with Love Care Share Foundation to connect donors with urgent requests.</p>
+                        <div class="project-footer">
+                            <span class="case-study-badge">Read Case Study</span>
+                            <div class="project-links">
+                                <a href="#" class="project-link-btn" onclick="event.stopPropagation();"><i
+                                        data-lucide="github"></i></a>
+                                <a href="#" class="project-link-btn" onclick="event.stopPropagation();"><i
+                                        data-lucide="external-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: NexSolve -->
+                <div class="project-card" data-tags="python,ai,chromadb,fastapi" data-id="nexsolve">
+                    <div class="project-img-wrapper">
+                        <img src="nexsolve-cover.svg" alt="NexSolve project preview" class="project-img">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">AI / LLM</span>
+                            <span class="project-tag">ChromaDB</span>
+                        </div>
+                        <h3>NexSolve</h3>
+                        <p>An AI developer-tools startup I built and worked on with two clients, helping analyze
+                            codebases, identify issues, and support faster engineering decisions.</p>
+                        <div class="project-footer">
+                            <span class="case-study-badge">Read Case Study</span>
+                            <div class="project-links">
+                                <a href="#" class="project-link-btn" onclick="event.stopPropagation();"><i
+                                        data-lucide="github"></i></a>
+                                <a href="#" class="project-link-btn" onclick="event.stopPropagation();"><i
+                                        data-lucide="external-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: intelliSOC -->
+                <div class="project-card" data-tags="go,kafka,pytorch,react" data-id="intellisoc">
+                    <div class="project-img-wrapper">
+                        <img src="intellisoc-cover.svg" alt="intelliSOC project preview" class="project-img">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">Go</span>
+                            <span class="project-tag">Apache Kafka</span>
+                            <span class="project-tag">PyTorch</span>
+                        </div>
+                        <h3>intelliSOC</h3>
+                        <p>A security monitoring project built with a team during the OpenAI Codex Hackathon, focused
+                            on correlating events and detecting suspicious activity in real time.</p>
+                        <div class="project-footer">
+                            <span class="case-study-badge">Read Case Study</span>
+                            <div class="project-links">
+                                <a href="#" class="project-link-btn" onclick="event.stopPropagation();"><i
+                                        data-lucide="github"></i></a>
+                                <a href="#" class="project-link-btn" onclick="event.stopPropagation();"><i
+                                        data-lucide="external-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Agentrix AI -->
+                <div class="project-card" data-tags="ai,automation,workflow,agents" data-id="agentrix">
+                    <div class="project-img-wrapper">
+                        <img src="agentrix-cover.svg" alt="Agentrix AI project preview" class="project-img">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">AI Agents</span>
+                            <span class="project-tag">Automation</span>
+                            <span class="project-tag">Workflows</span>
+                        </div>
+                        <h3>Agentrix AI</h3>
+                        <p>An AI workflow automation platform inspired by tools like n8n and Zapier, designed to connect
+                            apps, trigger intelligent agents, and automate business processes visually.</p>
+                        <div class="project-footer">
+                            <span class="case-study-badge">Read Case Study</span>
+                            <div class="project-links">
+                                <a href="#" class="project-link-btn" onclick="event.stopPropagation();"><i
+                                        data-lucide="github"></i></a>
+                                <a href="#" class="project-link-btn" onclick="event.stopPropagation();"><i
+                                        data-lucide="external-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Jarvis -->
+                <div class="project-card" data-tags="ai,assistant,automation,voice" data-id="jarvis">
+                    <div class="project-img-wrapper">
+                        <img src="jarvis-cover.svg" alt="Jarvis project preview" class="project-img">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">AI Assistant</span>
+                            <span class="project-tag">Automation</span>
+                            <span class="project-tag">Personal AI</span>
+                        </div>
+                        <h3>Jarvis</h3>
+                        <p>A personal AI assistant built to handle everyday tasks, answer questions, automate workflows,
+                            manage context, and support productivity through natural conversation.</p>
+                        <div class="project-footer">
+                            <span class="case-study-badge">Read Case Study</span>
+                            <div class="project-links">
+                                <a href="#" class="project-link-btn" onclick="event.stopPropagation();"><i
+                                        data-lucide="github"></i></a>
+                                <a href="#" class="project-link-btn" onclick="event.stopPropagation();"><i
+                                        data-lucide="external-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WORK EXPERIENCE -->
+    <section class="section" id="experience">
+        <div class="container">
+            <h2 class="section-title">Work Experience</h2>
+            <p class="section-subtitle">Chronological record of my professional milestones.</p>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-time">July 2026 - Present</div>
+                    <h4 class="timeline-title">Jr. AI/ML Engineer</h4>
+                    <div class="timeline-org">SPCL</div>
+                    <p class="timeline-desc">Designing and deploying sequence anomaly detection models, indexing
+                        codebases in vector databases, and constructing real-time data streaming pipelines with
+                        PyTorch and Kafka.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-time">May 2026 - June 2026</div>
+                    <h4 class="timeline-title">Java Full Stack Developer</h4>
+                    <div class="timeline-org">FUEL (Friends Union for Energising Lives)</div>
+                    <p class="timeline-desc">Engineered secure MVC web portals using Spring Boot, Hibernate, and
+                        Angular/React. Managed relational databases, built automatic alerts, and deployed
+                        containerized microservices.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-time">Nov 2025 - April 2026</div>
+                    <h4 class="timeline-title">SAP Backend Developer</h4>
+                    <div class="timeline-org">Edunet Foundation</div>
+                    <p class="timeline-desc">Authored and customized SAP ABAP queries, structured OData gateway
+                        services for frontend communication, and conducted database migration routines.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section class="section" id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <p class="section-subtitle">Academic background and degree timeline.</p>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-time">2023 - 2027</div>
+                    <h4 class="timeline-title">B.E in Computer Science</h4>
+                    <p class="timeline-desc">Gaining a strong foundation in programming, data structures, software
+                        engineering, AI concepts, databases, and real-world project development while building practical
+                        products that connect classroom learning with industry problems.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-time">2025 - 2026</div>
+                    <h4 class="timeline-title">SAP Fundamentals</h4>
+                    <div class="timeline-org">Edunet Foundation</div>
+                    <p class="timeline-desc">Completed SAP Fundamentals through Edunet Foundation along with an
+                        internship experience, gaining hands-on exposure to enterprise systems, SAP backend concepts,
+                        ABAP Cloud development, and officially earning the SAP Certified - Backend Developer (ABAP Cloud)
+                        credential.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT I DO SECTION -->
+    <section class="section" id="services">
+        <div class="container">
+            <h2 class="section-title">What I Do</h2>
+            <p class="section-subtitle">Focused areas where I build practical, production-ready solutions.</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="brain-circuit"></i>
+                    </div>
+                    <h3>AI & Machine Learning Models</h3>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="sparkles"></i>
+                    </div>
+                    <h3>Generative AI & LLMs Applications</h3>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="layers"></i>
+                    </div>
+                    <h3>Full-Stack Development</h3>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="server"></i>
+                    </div>
+                    <h3>Backend & APIs Development</h3>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="chart-no-axes-combined"></i>
+                    </div>
+                    <h3>Data Science & Analytics</h3>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="cloud"></i>
+                    </div>
+                    <h3>Cloud & Deployment</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACHIEVEMENTS SECTION -->
+    <section class="section" id="achievements">
+        <div class="container">
+            <h2 class="section-title">Achievements</h2>
+            <p class="section-subtitle">Highlights from projects, competitions, and technical learning.</p>
+
+            <div class="achievements-timeline">
+                <div class="achievement-item">
+                    <div class="achievement-date">SIH'25 Hackethon</div>
+                    <h4 class="achievement-title">Internal Nomination for the Finale</h4>
+                    <p>Built MandirGo for SIH'25, a devotional tourism and temple-management solution focused on crowd
+                        insights, pilgrim guidance, and smarter temple visit planning.</p>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-date">NAAC</div>
+                    <h4 class="achievement-title">Project Participation and Appreciation</h4>
+                    <p>Created a physical fire-fighting robot using Arduino, fire sensors, and a water tank mechanism
+                        that senses fire and responds by releasing water toward the source.</p>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-date">Leader</div>
+                    <h4 class="achievement-title">Leader of Marketing Team</h4>
+                    <p>Led the marketing team for college fests, coordinated event promotions, managed team execution,
+                        and supported smooth planning across multiple campus activities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATIONS SECTION -->
+    <section class="section" id="certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <p class="section-subtitle">Professional certifications and completed learning programs.</p>
+
+            <div class="certs-grid">
+                <a class="cert-card cert-link-card" href="https://coursera.org/share/0461c7c0609939195b8ba2d8df1c78ed"
+                    target="_blank" rel="noopener noreferrer">
+                    <div>
+                        <h4 class="cert-title">SAP Technology Consultant Professional Certificate</h4>
+                        <p class="cert-issuer">Coursera</p>
+                    </div>
+                    <i data-lucide="external-link"></i>
+                </a>
+
+                <a class="cert-card cert-link-card" href="https://coursera.org/share/8b8207e6f89ad625892202e0ae3f407e"
+                    target="_blank" rel="noopener noreferrer">
+                    <div>
+                        <h4 class="cert-title">Generative AI for Software Developers Specialization</h4>
+                        <p class="cert-issuer">Coursera</p>
+                    </div>
+                    <i data-lucide="external-link"></i>
+                </a>
+
+                <a class="cert-card cert-link-card"
+                    href="https://www.credly.com/badges/00479ca8-0d7c-44f2-b668-c041ae11f3c2/public_url"
+                    target="_blank" rel="noopener noreferrer">
+                    <div>
+                        <h4 class="cert-title">SAP Certified - Backend Developer (ABAP Cloud)</h4>
+                        <p class="cert-issuer">Credly</p>
+                    </div>
+                    <i data-lucide="external-link"></i>
+                </a>
+
+                <a class="cert-card cert-link-card"
+                    href="https://drive.google.com/file/d/1ekWxpnywct-ss0D8iPvOnZo5sEgQbnUQ/view?usp=sharing"
+                    target="_blank" rel="noopener noreferrer">
+                    <div>
+                        <h4 class="cert-title">SAP's Job Readiness Program Certification</h4>
+                        <p class="cert-issuer">Google Drive</p>
+                    </div>
+                    <i data-lucide="external-link"></i>
+                </a>
+            </div>
+
+            <div class="reference-block">
+                <h3 class="reference-heading">Reference</h3>
+                <div class="reference-card">
+                    <div class="reference-photo-wrapper">
+                        <img src="sanjay-shah.jpg" alt="Sanjay Shah" class="reference-photo">
+                    </div>
+                    <div class="reference-info">
+                        <h4 class="reference-name">Sanjay Shah</h4>
+                        <p class="reference-role">Founder, SPCL Infotech Services Pvt. Ltd.</p>
+                        <p class="reference-bio">Sanjay Shah is the Founder of SPCL Infotech Services Pvt. Ltd.,
+                            established in 2018. He brings 25 years of management experience and has played an
+                            important role in building the company through strategic planning, alliances, and
+                            partnerships. Under his active participation, SPCL Infotech Services Pvt. Ltd. has grown
+                            in software development, testing, Big Data Analytics, and several computer and IT
+                            applications. He received his master's degree in 1983 from Shivaji University,
+                            Kolhapur.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section" id="contact">
+        <div class="container contact-showcase">
+            <div class="contact-heading">
+                <span class="section-kicker">Contact</span>
+                <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+                <p class="section-subtitle">Whether you have a project in mind, a problem to solve, or just want to
+                    say hello, I'm always just a message away. Reach out, and let's start building something great
+                    together.</p>
+            </div>
+
+            <div class="contact-inline-grid">
+                <a class="contact-mini-card" href="mailto:tanmayyenpure2005@gmail.com">
+                    <div class="contact-card-icon">
+                        <i data-lucide="mail"></i>
+                    </div>
+                    <span>Email</span>
+                    <strong>tanmayyenpure2005@gmail.com</strong>
+                </a>
+
+                <a class="contact-mini-card" href="tel:+917517965329">
+                    <div class="contact-card-icon">
+                        <i data-lucide="phone"></i>
+                    </div>
+                    <span>Phone</span>
+                    <strong>+91 75179 65329</strong>
+                </a>
+
+                <div class="contact-mini-card">
+                    <div class="contact-card-icon">
+                        <i data-lucide="map-pin"></i>
+                    </div>
+                    <span>Address</span>
+                    <strong>Pune, Maharashtra</strong>
+                </div>
+
+                <a class="contact-mini-card" href="https://www.linkedin.com/in/tanmay-yenpure-779a81333" target="_blank"
+                    rel="noopener noreferrer">
+                    <div class="contact-card-icon brand-icon linkedin-logo">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <rect width="24" height="24" rx="4" fill="#0A66C2" />
+                            <path fill="#ffffff"
+                                d="M6.94 8.78H3.92v10.1h3.02V8.78ZM5.43 7.4c.97 0 1.75-.79 1.75-1.76 0-.96-.78-1.74-1.75-1.74s-1.75.78-1.75 1.74c0 .97.78 1.76 1.75 1.76Zm13.97 11.48v-5.52c0-2.96-1.58-4.34-3.69-4.34-1.7 0-2.46.94-2.88 1.6V8.78H9.93v10.1h3.02v-5c0-1.32.25-2.6 1.89-2.6 1.61 0 1.63 1.51 1.63 2.68v4.92h2.93Z" />
+                        </svg>
+                    </div>
+                    <span>LinkedIn</span>
+                    <strong>Tanmay Yenpure</strong>
+                </a>
+
+                <a class="contact-mini-card" href="https://github.com/tanmayyenpure" target="_blank"
+                    rel="noopener noreferrer">
+                    <div class="contact-card-icon brand-icon github-logo">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill="currentColor"
+                                d="M12 .5C5.73.5.75 5.48.75 11.75c0 4.96 3.2 9.18 7.64 10.68.56.1.76-.24.76-.54v-2.1c-3.11.68-3.76-1.32-3.76-1.32-.51-1.29-1.24-1.63-1.24-1.63-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15.99 1.7 2.61 1.21 3.24.92.1-.72.39-1.21.71-1.49-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.44-2.22 1.15-3-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.09 1.15.9-.25 1.86-.38 2.82-.38.96 0 1.92.13 2.82.38 2.15-1.45 3.09-1.15 3.09-1.15.61 1.54.23 2.68.11 2.96.72.78 1.15 1.78 1.15 3 0 4.29-2.61 5.24-5.1 5.52.4.35.76 1.03.76 2.08v3.08c0 .3.2.65.77.54 4.43-1.5 7.63-5.72 7.63-10.68C23.25 5.48 18.27.5 12 .5z" />
+                        </svg>
+                    </div>
+                    <span>GitHub</span>
+                    <strong>tanmayyenpure</strong>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container copyright-footer">
+            <p>© 2026 Tanmay Yenpure. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- OVERLAY MODALS -->
+
+    <!-- Case Study Modal -->
+    <div class="modal-overlay" id="case-study-modal">
+        <div class="modal-content">
+            <button class="modal-close-btn" id="modal-close-btn" title="Close Modal">
+                <i data-lucide="x"></i>
+            </button>
+            <div class="modal-body" id="modal-body-content">
+                <!-- Injected dynamically via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Command Palette Modal -->
+    <div class="cmd-palette-overlay" id="cmd-palette">
+        <div class="cmd-palette-box">
+            <div class="cmd-palette-search">
+                <i data-lucide="search"></i>
+                <input type="text" id="cmd-search-input" placeholder="Type a command or search..." autocomplete="off">
+            </div>
+            <div class="cmd-palette-results" id="cmd-palette-results">
+                <!-- Populated dynamically via JS -->
+            </div>
+            <div class="cmd-palette-footer">
+                <span>↑↓ to navigate • Enter to select • Esc to close</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js?v=20260701-1315"></script>
+</body>
+
+</html>

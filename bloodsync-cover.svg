@@ -1,0 +1,44 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0b12"/>
+      <stop offset="100%" stop-color="#1a0f18"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fb7185"/>
+      <stop offset="100%" stop-color="#e11d48"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#e11d48" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#e11d48" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#ffffff" opacity="0.06"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="400" fill="url(#bgGrad)"/>
+  <rect width="800" height="400" fill="url(#dots)"/>
+  <rect width="800" height="400" fill="url(#glow)"/>
+
+  <g transform="translate(400,205)">
+    <!-- left node: donor -->
+    <circle cx="-160" cy="-10" r="34" fill="none" stroke="url(#accentGrad)" stroke-width="3.5"/>
+    <circle cx="-160" cy="-10" r="8" fill="url(#accentGrad)"/>
+    <!-- right node: recipient -->
+    <circle cx="160" cy="-10" r="34" fill="none" stroke="url(#accentGrad)" stroke-width="3.5"/>
+    <circle cx="160" cy="-10" r="8" fill="url(#accentGrad)"/>
+    <!-- connecting sync line -->
+    <line x1="-126" y1="-10" x2="126" y2="-10" stroke="#5fd0e8" stroke-width="2.5" stroke-dasharray="2 10" stroke-linecap="round" opacity="0.7"/>
+
+    <!-- blood drop center -->
+    <path d="M0,-70 C34,-24 44,4 44,26 C44,52 24,72 0,72 C-24,72 -44,52 -44,26 C-44,4 -34,-24 0,-70 Z"
+          fill="url(#redGrad)"/>
+    <!-- pulse line through drop -->
+    <polyline points="-30,26 -14,26 -6,6 6,46 14,26 30,26" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+  </g>
+</svg>

@@ -1,0 +1,63 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0b12"/>
+      <stop offset="100%" stop-color="#1f1509"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="46%" r="55%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#ffffff" opacity="0.06"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="400" fill="url(#bgGrad)"/>
+  <rect width="800" height="400" fill="url(#dots)"/>
+  <rect width="800" height="400" fill="url(#glow)"/>
+
+  <g transform="translate(400,210)">
+    <!-- ground line -->
+    <line x1="-190" y1="86" x2="190" y2="86" stroke="#ffffff" stroke-width="2" opacity="0.12"/>
+
+    <!-- temple gopuram silhouette (stepped tiers) -->
+    <g fill="none" stroke="url(#accentGrad)" stroke-width="3.5" stroke-linejoin="round">
+      <!-- base -->
+      <rect x="-70" y="46" width="140" height="40" />
+      <!-- tier 1 -->
+      <path d="M-58,46 L-46,10 L46,10 L58,46 Z" />
+      <!-- tier 2 -->
+      <path d="M-40,10 L-30,-22 L30,-22 L40,10 Z" />
+      <!-- tier 3 -->
+      <path d="M-24,-22 L-15,-50 L15,-50 L24,-22 Z" />
+      <!-- pinnacle -->
+      <path d="M-8,-50 L0,-74 L8,-50 Z" />
+      <!-- doorway -->
+      <path d="M-16,86 L-16,58 C-16,50 16,50 16,58 L16,86" />
+    </g>
+    <circle cx="0" cy="-80" r="4" fill="url(#goldGrad)"/>
+
+    <!-- live crowd / queue dots -->
+    <circle cx="-140" cy="70" r="5" fill="#ffffff" opacity="0.5"/>
+    <circle cx="-124" cy="70" r="5" fill="#ffffff" opacity="0.5"/>
+    <circle cx="-108" cy="70" r="5" fill="#ffffff" opacity="0.5"/>
+    <circle cx="108" cy="70" r="5" fill="#ffffff" opacity="0.35"/>
+    <circle cx="124" cy="70" r="5" fill="#ffffff" opacity="0.35"/>
+
+    <!-- map pin marking the temple location -->
+    <g transform="translate(112,-46)">
+      <path d="M0,-34 C19,-34 32,-20 32,-3 C32,20 0,46 0,46 C0,46 -32,20 -32,-3 C-32,-20 -19,-34 0,-34 Z"
+            fill="#0b0b12" stroke="url(#accentGrad)" stroke-width="4"/>
+      <circle cx="0" cy="-3" r="10" fill="url(#accentGrad)"/>
+    </g>
+  </g>
+</svg>

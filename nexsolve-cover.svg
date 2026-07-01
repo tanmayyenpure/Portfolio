@@ -1,0 +1,47 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0b12"/>
+      <stop offset="100%" stop-color="#170f27"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="42%" r="55%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#ffffff" opacity="0.06"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="400" fill="url(#bgGrad)"/>
+  <rect width="800" height="400" fill="url(#dots)"/>
+  <rect width="800" height="400" fill="url(#glow)"/>
+
+  <!-- terminal / code analysis window -->
+  <g transform="translate(400,200)">
+    <rect x="-170" y="-95" width="340" height="190" rx="14" fill="none" stroke="url(#accentGrad)" stroke-width="3.5"/>
+    <line x1="-170" y1="-55" x2="170" y2="-55" stroke="#8b8cf0" stroke-width="2" opacity="0.6"/>
+    <circle cx="-148" cy="-75" r="4.5" fill="#22d3ee" opacity="0.85"/>
+    <circle cx="-130" cy="-75" r="4.5" fill="#a78bfa" opacity="0.85"/>
+    <circle cx="-112" cy="-75" r="4.5" fill="#ffffff" opacity="0.5"/>
+
+    <!-- code lines -->
+    <line x1="-140" y1="-25" x2="-10" y2="-25" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.55"/>
+    <line x1="-140" y1="3" x2="60" y2="3" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.35"/>
+    <line x1="-140" y1="31" x2="20" y2="31" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.35"/>
+    <line x1="-140" y1="59" x2="90" y2="59" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
+
+    <!-- AI scan highlight bar -->
+    <rect x="-145" y="-33" width="150" height="16" rx="6" fill="url(#accentGrad)" opacity="0.22"/>
+
+    <!-- scanning magnifier -->
+    <g transform="translate(150,60)">
+      <circle r="30" fill="#0b0b12" stroke="url(#accentGrad)" stroke-width="4"/>
+      <line x1="21" y1="21" x2="42" y2="42" stroke="url(#accentGrad)" stroke-width="6" stroke-linecap="round"/>
+    </g>
+  </g>
+</svg>
